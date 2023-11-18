@@ -1,0 +1,81 @@
+.main_sec{
+    @include flex;
+    color: map-get($color, "white");
+}
+
+.art_sec{
+    text-align: center;
+    color: map-get($color, "white");
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.agency{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: lowercase;
+    padding: 20px;
+    line-height: 47px;
+    color: #AAA;
+    font-family: Fira sans;
+}
+
+
+.ARROW{
+    width: 18px;
+}
+.About{
+    display: flex;
+    gap: 0.7rem;
+    text-decoration: underline;
+    font-size: 24px
+}
+
+.double{
+    @include double();
+}
+
+a{
+    color: map-get($color, "white" )
+}
+
+
+// .blog{
+//     position: relative;
+// }
+// .blog{
+//     position: absolute;
+//     background-color: #fff;
+//     margin: 20rem;
+//     margin-left: 35rem;
+//     border-radius: 40px;
+//     padding: 30px;
+//  }
+// @media screen and (max-width: 500px) {
+//         main{
+//             .main_sec{
+//                 gap: 4rem;
+//                 padding-right: 0.7rem;
+              
+//             }
+
+//             .blog{
+//                 margin-left: 10rem;
+//                 margin-top: 5rem;
+//             }
+//         }
+
+// }
+// @media screen and (max-width: 900px) {
+//         main{
+            
+
+//             .blog{
+//                 margin-left: 22.5rem;
+//                 margin-top: 12rem;
+//             }
+//         }
+
+// }

@@ -1,0 +1,79 @@
+.feat{
+ @include feat;
+}
+
+.hr{
+  margin-top: 5rem;
+}
+
+// .exp{
+//   float: right
+// }
+
+.see{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 3rem;
+    p{
+        color: map-get($color, "white" );
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: 35px;
+    }
+}
+
+
+.mapped{
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 30px;
+    gap: 3rem;
+    padding: 30px;
+}
+
+
+.para_one{
+    color: map-get($color, "white" );
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.para_two{
+    margin-top: 20px;
+    color: #AAA;
+    line-height: 57px;
+}
+.para_three{
+    margin-top: 2rem;
+    color: #AAA;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    main{
+       .feat{
+      font-size: 20px;
+      padding-right: 5px;
+      gap: 2rem;
+       }
+
+       .exp{
+       width: 14rem;
+       }
+
+       .see{
+        p{
+            font-size: 15px;
+        }
+       }
+
+       .mapped{
+        grid-template-columns: 1fr;
+       }
+   
+    }
+
+}

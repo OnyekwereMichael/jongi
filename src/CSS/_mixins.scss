@@ -1,0 +1,53 @@
+$color: (
+    "black": rgba(0, 0, 0, 0.904),
+    "whitesmoke": whitesmoke,
+    "red": red,
+    "lightblue": #27AAE1,
+    "golden":  #FB7203,
+    "fadedblue": #F3F7FC,
+    "white": #fff,
+    "wine": #BF3030,
+
+);
+
+@mixin grid(){
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 4rem;
+      align-items: center;
+     padding: 20px;
+     padding-left: 8%;
+    // display: flex;
+    // justify-content: space-around;
+   
+    
+}
+
+@mixin flex(){
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 40px;
+}
+@mixin double(){
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding-top: 14px;
+color: #fff;
+}
+@mixin feat(){
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    color: #fff;
+    font-size: 24px;
+    padding-top: 60px;
+}
+@mixin ven(){
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    padding: 20px;
+    color: map-get($color, "white" );
+}

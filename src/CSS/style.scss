@@ -1,0 +1,46 @@
+@import "mixins";
+@import "article";
+@import "Header";
+@import "Main";
+@import "Footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+body{
+    background-color: map-get($color, "black" );
+}
+
+
+
+//     @media screen and (max-width: 900px) {
+// .jongi{
+//     padding: 50px;
+//     margin-left: 15px;
+// }
+//     }
+  
+   
+    // @media screen and (max-width: 300px) {
+    //     header{
+    //         .jongi{
+    //             padding: 0;
+    //             font-size: 4rem;
+    //             // margin-left: 15px;
+    //         }
+    //     }
+    // }
+
+    // }
+//     @media screen and (max-width: 900px) {
+// .jongi{
+//     padding: 50px;
+//     margin-left: 15px;
+// }
+//     }

@@ -1,0 +1,99 @@
+header{
+    .jon{
+     @include grid;
+    }
+ 
+     .header__p{
+         color: map-get($color, "white")
+     }
+ 
+         .header__links, ul, a{
+             color: map-get($color, "white");
+             display: flex;
+             gap: 1rem;
+             text-decoration: none;
+         }
+
+        .header__links, a{
+            // border-radius: 6px;
+            // background-color: #000;
+            width: 100%;
+            padding: 7px;
+            // color: white;
+        }
+ 
+         .jongi{
+                margin-top: 20px;
+                padding: 20px;
+            }
+ 
+            .scroll{
+             text-align: center;
+             color: map-get($color, "white");
+             margin-bottom: 10px;
+             font-weight: bold;
+            }  
+            .hamburger{
+                cursor: pointer;
+                position: absolute;
+                top: 5rem;
+                right: 0.5rem;
+                display: none;
+                width: 35px;
+                background: none;
+                height: 35px;
+                outline: none;
+                appearance: none;
+                border: none;
+               
+              }
+              
+              .hamburger .bar, .hamburger:after, .hamburger:before{
+                content: "";
+              display: block;
+              width: 100%;
+              height: 5px;
+              background-color: #000;
+              margin: 6px 0px;
+              transition: 0.4s;
+              border-radius: 0.3rem;
+              }      
+     }
+
+     @media screen and (max-width: 500px) {
+        header{
+            .hamburger{
+                display: block;
+            }
+
+          .header__links, ul, a{
+            display: none;
+            flex-direction: column;
+            width: 30%;
+            margin-bottom: 1rem;
+            position: relative;
+            top: 3.5rem;
+            left: -5.4rem;
+            font-weight: 500;
+            font-size: 20px;
+          }
+
+          //  .header__links, ul.open{
+          //   display: block;
+          // }
+        }
+
+     }
+
+    
+   
+    //  @media screen and (max-width: 500px) {
+    //     header{
+    //         .jongi{
+    //             padding: 0;
+    //             font-size: 7rem;
+    //             // margin-left: 15px;
+    //         }
+    //     }
+
+    // }
