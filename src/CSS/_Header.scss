@@ -33,31 +33,31 @@ header{
              margin-bottom: 10px;
              font-weight: bold;
             }  
-            .hamburger{
-                cursor: pointer;
-                position: absolute;
-                top: 5rem;
-                right: 0.5rem;
-                display: none;
-                width: 35px;
-                background: none;
-                height: 35px;
-                outline: none;
-                appearance: none;
-                border: none;
+            // .hamburger{
+            //     cursor: pointer;
+            //     position: absolute;
+            //     top: 5rem;
+            //     right: 0.5rem;
+            //     display: none;
+            //     width: 35px;
+            //     background: none;
+            //     height: 35px;
+            //     outline: none;
+            //     appearance: none;
+            //     border: none;
                
-              }
+            //   }
               
-              .hamburger .bar, .hamburger:after, .hamburger:before{
-                content: "";
-              display: block;
-              width: 100%;
-              height: 5px;
-              background-color: #000;
-              margin: 6px 0px;
-              transition: 0.4s;
-              border-radius: 0.3rem;
-              }      
+            //   .hamburger .bar, .hamburger:after, .hamburger:before{
+            //     content: "";
+            //   display: block;
+            //   width: 100%;
+            //   height: 5px;
+            //   background-color: #000;
+            //   margin: 6px 0px;
+            //   transition: 0.4s;
+            //   border-radius: 0.3rem;
+            //   }      
      }
      @media screen and (max-width: 500px) {
         header{

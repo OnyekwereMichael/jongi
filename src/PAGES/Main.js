@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import blue from '../Assests/2020 - 23.png';
 import fruit from '../Assests/fruit.png';
 import coca from '../Assests/Rectangle 2 (2).png'
 import phone from '../Assests/Rectangle 2 (1).png'
 import man from '../Assests/Rectangle 2.png';
+import { motion, useInView, useAnimation } from "framer-motion"
 
 function Main() {
   const mat = [
@@ -33,9 +34,9 @@ function Main() {
     },
   ]
 
-  
   return (
-      <main>
+      <motion.main
+      >
           <hr className='hr'/>
           <section className='feat'>
               <div>Featured works</div>
@@ -52,10 +53,25 @@ function Main() {
           </section>
 
 
-          <div className='mapped'>
+  <div className='mapped'>
 {mat.map((item, index) =>{
   return (
-    <div key={index}>
+    <motion.div key={index}
+    variants={{
+      hidden: {
+        x: -50, y: -50
+      },
+      visible: {
+        x: 0, y: 0
+      }
+    }}
+    initial= "hidden"
+   whileInView="visible"
+   viewport={{
+    once: true,
+   }}
+    transition={{duration: 0.3, delay: index * 0.13}}
+    >
       <div>
         <img src={item.img} alt="" className='cmf'/>
     </div>
@@ -68,12 +84,12 @@ function Main() {
  <div>
       <p className='para_three'>{item.category}</p>
  </div>
-    </div>
+    </motion.div>
   
   )
 })}
       </div>
-      </main>
+      </motion.main>
   )
 }
 

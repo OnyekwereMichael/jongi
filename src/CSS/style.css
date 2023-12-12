@@ -153,9 +153,6 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
     font-weight: 500;
     font-size: 20px;
   }
-  header .header__links, header ul.open {
-    display: block;
-  }
 }
 
 .feat {

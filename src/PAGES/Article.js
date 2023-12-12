@@ -2,9 +2,13 @@ import React from 'react';
 import RECT from '../Assests/Rectangle 1 (1).png'
 import red from '../Assests/_.png'
 import { Link } from 'react-router-dom';
+import {motion } from "framer-motion"
+
+
 function Article() {
   return (
-                <main>
+                <motion.main
+                 >
               <section className='main_sec'>
             <div>
                 <p >CREATIVE AGENCY</p>
@@ -50,11 +54,12 @@ function Article() {
         
       </section>
       </article>
-            </main>
+            </motion.main>
     
-   
+
   )
 }
+
 
 export default Article;
 

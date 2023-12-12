@@ -2,9 +2,29 @@ import React from 'react'
 import small from '../Assests/small.png';
 import Jongi from '../Assests/JONGI MEDIA.png';
 import circle from '../Assests/Ellipse 1.png'
+import { motion} from "framer-motion"
 function Footer() {
+  const conitaner = {
+    hidden: {
+      y: 800, opacity: 0
+    },
+    visible:{
+      y: 0, opacity: 1,
+      transition:{
+        duration: 1.6, ease: "easeInOut",
+      }
+    }
+  }
   return (
-    <footer>
+    <motion.footer  
+    variants={conitaner}
+    initial= "hidden"
+    whileInView= "visible"
+    transition={{duration: 0.6, delay: 0.23, ease: "easeInOut"}}
+    viewport={{
+      once: true
+    }}
+    >
     <h2 className='client'>CLIENT'S REVIEW</h2>
     <hr />
 
@@ -44,11 +64,16 @@ function Footer() {
           </div>
           
          </section>
-         <div className='jh'>
+         <motion.div 
+         initial={{x:[0, 200, 0,200]}}
+         animate={{x: [100, -200, 300, -400], y:[-100, 200 , -300, 400]}}
+         transition={{repeat: Infinity, duration: 5, delay: 0.4,
+        }}
+         className='jh'>
         <p className='hj'>Get in <br/>touch</p>
-      </div>
+      </motion.div>
       
-</footer>
+</motion.footer>
 
   )
 }
