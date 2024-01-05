@@ -1,13 +1,7 @@
 .main_sec {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 40px;
   color: #fff;
 }
@@ -36,8 +30,6 @@
 }
 
 .About {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 0.7rem;
   text-decoration: underline;
@@ -45,14 +37,9 @@
 }
 
 .double {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 14px;
   color: #fff;
 }
@@ -62,57 +49,41 @@ a {
 }
 
 header .jon {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1.2fr 1fr 1fr;
-      grid-template-columns: 1.2fr 1fr 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  justify-content: space-between;
   gap: 4rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 20px;
   padding-left: 8%;
 }
-
 header .header__p {
   color: #fff;
 }
-
 header .header__links, header ul, header a {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 1rem;
   text-decoration: none;
 }
-
 header .header__links, header a {
   width: 100%;
   padding: 7px;
 }
-
 header .jongi {
   margin-top: 20px;
   padding: 20px;
 }
-
 header .scroll {
   text-align: center;
   color: #fff;
   margin-bottom: 10px;
   font-weight: bold;
 }
-
 header .hamburger {
   cursor: pointer;
-  position: absolute;
-  top: 5rem;
-  right: 0.5rem;
-  display: none;
+  position: relative;
+  display: block;
   width: 35px;
   background: none;
   height: 35px;
@@ -121,8 +92,8 @@ header .hamburger {
      -moz-appearance: none;
           appearance: none;
   border: none;
+  margin-left: 30px;
 }
-
 header .hamburger .bar, header .hamburger:after, header .hamburger:before {
   content: "";
   display: block;
@@ -130,9 +101,44 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
   height: 5px;
   background-color: #000;
   margin: 6px 0px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 0.3rem;
+}
+header .hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 5px);
+}
+header .hamburger.is-active:after {
+  transform: rotate(45deg) translate(-10px, -8px);
+}
+header .hamburger.is-active .bar {
+  opacity: 0;
+}
+header .mobile-nav {
+  display: inline-block;
+  display: block;
+  background-color: rgb(54, 105, 54);
+  position: fixed;
+  right: 100%;
+  margin: 0 auto;
+  width: 65%;
+  height: 100vh;
+}
+header .mobile-nav a {
+  display: block;
+  padding-top: 25px;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+header .mobile-nav.is-active {
+  left: 0;
+  transition: 0.4s;
+}
+header .mobile-nav a:hover {
+  background-color: #fff;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 500px) {
@@ -141,10 +147,7 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
   }
   header .header__links, header ul, header a {
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 30%;
     margin-bottom: 1rem;
     position: relative;
@@ -154,13 +157,9 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
     font-size: 20px;
   }
 }
-
 .feat {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 40px;
   color: #fff;
   font-size: 24px;
@@ -172,18 +171,11 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
 }
 
 .see {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: flex-end;
   gap: 3rem;
 }
-
 .see p {
   color: #fff;
   font-weight: bold;
@@ -192,10 +184,8 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
 }
 
 .mapped {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 30px;
   gap: 3rem;
   padding: 30px;
@@ -231,41 +221,29 @@ header .hamburger .bar, header .hamburger:after, header .hamburger:before {
     font-size: 15px;
   }
   main .mapped {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
-
 footer .client {
   color: #fff;
   padding: 10px;
 }
-
 footer .VEN {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.5fr 0.5fr 0.5fr;
-      grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
   padding: 20px;
   color: #fff;
 }
-
 footer .VEN .VEN_P {
   text-decoration: underline;
 }
-
 footer .brand {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 20px;
   margin-left: 30%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 footer .branding {
   background-color: inherit;
   font-size: 20px;
@@ -274,7 +252,6 @@ footer .branding {
   border-radius: 6px;
   border: 2px solid gold;
 }
-
 footer .lorem {
   text-align: right;
   color: #fff;
@@ -290,24 +267,17 @@ footer .lorem {
 }
 
 .ift {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: #fff;
   margin-top: 30px;
   padding: 20px;
 }
 
 .span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .marq {
@@ -317,20 +287,15 @@ footer .lorem {
 }
 
 .marquee {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 1.3;
   width: 110%;
   text-transform: uppercase;
   white-space: nowrap;
   font-size: 3rem;
   overflow: hidden;
-  -webkit-animation: marquee 10s infinite linear;
-          animation: marquee 10s infinite linear;
+  animation: marquee 10s infinite linear;
 }
 
 .jh {
@@ -357,20 +322,11 @@ footer .lorem {
   padding: 42px;
 }
 
-@-webkit-keyframes marquee {
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
 @keyframes marquee {
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
-
 @media screen and (max-width: 900px) {
   footer .marquee {
     font-size: 2.3rem;
@@ -382,7 +338,6 @@ footer .lorem {
     display: none;
   }
 }
-
 @media screen and (max-width: 500px) {
   footer .brand {
     margin-left: 0;
@@ -396,12 +351,10 @@ footer .lorem {
     display: none;
   }
 }
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
@@ -410,5 +363,4 @@ img {
 
 body {
   background-color: rgba(0, 0, 0, 0.904);
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
