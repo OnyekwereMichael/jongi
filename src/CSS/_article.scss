@@ -6,7 +6,7 @@
 .creative span {
   color: hsl(0, 0%, 100%, 0.2);
   animation: text-reveal linear forwards;
-  animation-timeline: view();
+  animation-timeline: view(y);
   background-image: linear-gradient(90deg, white, white);
   background-clip: text;
   background-repeat: no-repeat;
