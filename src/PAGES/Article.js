@@ -49,7 +49,7 @@ function Article() {
 
         <section className="About">
           <div>
-            {/* <a href="">WHAT WE DO</a> */}
+            <a href="">WHAT WE DO</a>
           </div>
 
           <div>
